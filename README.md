@@ -6,3 +6,10 @@ Gradle = 8.3-rc2
 * Add your Marvel API keys to `main/res/raw/keys.json`
 * Build and run app
 
+## Libraries used
+* Retrofit, Turbine -> Square
+* Coil -> Instacart
+* Standard Google Libraries
+** Compose
+** Navigation
+
