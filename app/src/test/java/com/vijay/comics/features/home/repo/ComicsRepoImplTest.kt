@@ -17,7 +17,7 @@ class ComicsRepoImplTest {
 
 
     @Test
-    fun `load employees success`() = runTest {
+    fun `load comics success`() = runTest {
         val repository = ComicsRepoImpl(service, Dispatchers.Default)
         coEvery { service.getComics() } returns Result.Success(getListResponse())
 
@@ -47,7 +47,7 @@ class ComicsRepoImplTest {
     }
 
     @Test
-    fun `load employees failure with no cache`() = runTest {
+    fun `load comics failure with no cache`() = runTest {
         val repository = ComicsRepoImpl(service, Dispatchers.Default)
 
         // Remote service failure
@@ -71,7 +71,7 @@ class ComicsRepoImplTest {
     }
 
     @Test
-    fun `load employees failure with existing cache`() = runTest {
+    fun `load comics failure with existing cache`() = runTest {
         val repository = ComicsRepoImpl(service, Dispatchers.Default)
 
         // Test that on fresh launch response is from network

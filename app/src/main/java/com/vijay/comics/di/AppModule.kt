@@ -45,7 +45,7 @@ object AppModule {
 object AppServiceModule {
 
     /**
-     * Provide Employee Reftrofit service
+     * Provide Comic Reftrofit service
      */
     @Singleton
     @Provides

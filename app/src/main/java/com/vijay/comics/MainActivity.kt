@@ -157,7 +157,7 @@ fun EmptyScreen() {
                 .wrapContentHeight()
                 .padding(10.dp)
                 .align(Alignment.Center),
-            text = "No Employee Profiles Found",
+            text = "No Comics Found",
             style = MaterialTheme.typography.headlineSmall,
             textAlign = TextAlign.Center
         )
@@ -190,7 +190,7 @@ fun FailureScreen(retry: () -> Unit) {
                     .fillMaxWidth()
                     .wrapContentHeight()
                     .padding(10.dp),
-                text = "Failed to load Employee Profiles",
+                text = "Failed to load Comics",
                 style = MaterialTheme.typography.headlineSmall,
                 color = Color.Red,
                 textAlign = TextAlign.Center
@@ -216,8 +216,8 @@ fun ListScreen(list: List<ResultsItem>, onItemClick: (id: Int) -> Unit) {
             key = {
                 it.id
             }
-        ) { employee ->
-            ComicCard(employee, onItemClick)
+        ) { comic ->
+            ComicCard(comic, onItemClick)
         }
     }
 }

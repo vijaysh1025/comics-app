@@ -26,7 +26,7 @@ class ComicsListViewModel @Inject constructor(val repo: ComicsRepo, val dispatch
     private val _currentItem = MutableStateFlow(ResultsItem(id = 11))
     val currentItem: StateFlow<ResultsItem> = _currentItem
     /**
-     * Fetch employees from repo and map result to proper UI state
+     * Fetch comics from repo and map result to proper UI state
      */
     fun loadComicsList(userReload: Boolean = false) {
         _uiState.value = ComicsUiState.Loading
@@ -48,7 +48,7 @@ class ComicsListViewModel @Inject constructor(val repo: ComicsRepo, val dispatch
                                 // Empty UI state
                                 ComicsUiState.Empty
                             } else {
-                                // Show list of employees
+                                // Show list of comics
                                 ComicsUiState.Success(list)
                             }
                         }
